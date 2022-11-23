@@ -1,6 +1,10 @@
 import React from "react";
 
 const Nav = () => {
+    const handlerClick = () => {
+        console.log("click handled");
+    };
+    
     return(
         <header>
         <h1>
@@ -9,13 +13,13 @@ const Nav = () => {
         <nav>
             <ul>
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#about" onClick={() => handleClick()}>About</a>
                 </li>
                 <li>
-                    <a href="#work">Work</a>
+                    <a href="#work" onClick={() => handleClick()}>Work</a>
                 </li>
                 <li>
-                    <a href="#contacts">Contact</a>
+                    <a href="#contacts" onClick={() => handleClick()}>Contact</a>
                 </li>
             </ul>
         </nav>
