@@ -1,8 +1,15 @@
 import React from "react";
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
 const Nav = () => {
-    const handlerClick = () => {
-        console.log("click handled");
+
+    const categories = [
+        {name: 'Work', description: 'Past coding work examples; web application'},
+    ];
+
+    const handleClick = (item) => {
+        console.log(item);
+        return item;
     };
     
     return(
@@ -11,20 +18,30 @@ const Nav = () => {
             <a href="/">Jongwon (Michael) Choi's Portfolio</a>
         </h1>
         <nav>
-            <ul>
-                <li>
-                    <a href="#about" onClick={() => handleClick()}>About</a>
+            <ul className="flex-row">
+                <li className="mx-2">
+                    <a href="#about" onClick={() => handleClick("About")}>
+                        About
+                    </a>
                 </li>
-                <li>
-                    <a href="#work" onClick={() => handleClick()}>Work</a>
+                <li className={"mx-2"}>
+                    <a href="#contacts" onClick={() => handleClick("Contact")}>
+                        Contact
+                    </a>
                 </li>
-                <li>
-                    <a href="#contacts" onClick={() => handleClick()}>Contact</a>
-                </li>
+                {
+                    categories.map((category) => (
+                        <li className="mx-1" key={category.name}>
+                            <span onClick={() => { handleClick(category.name); }}>
+                                {capitalizeFirstLetter(category.name)}
+                            </span>
+                        </li>
+                    ))
+                }
             </ul>
         </nav>
         </header>
-    )
+    );
 };
 
 export default Nav;
