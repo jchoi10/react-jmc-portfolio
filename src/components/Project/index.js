@@ -1,80 +1,61 @@
 import React from "react";
+import { capitalizeFirstLetter } from "../../utils/helpers";
+import screenshot1 from "../../assets/large/PawShop.png";
+import screenshot2 from "../../assets/large/My_Meds_Homepage.png";
+import screenshot3 from "../../assets/large/EATionary_Homepage.png";
 
+const Project = (props) => {
+    const project1 = {
+        name: "Paw Shop (Group Project3)",
+        liveUrl: "https://pawshop.herokuapp.com/",
+    };
 
-const Projects = () => {
+    const project2 = {
+        name: "My Meds - Medication List Storage (Group Project2)",
+        liveUrl: "https://mymedlist.herokuapp.com/",
+    };
+
+    const project3 = {
+        name: "EATionary - Recipe Finder (Group Project1)",
+        liveUrl: "https://jchoi10.github.io/eat-healthy/",
+    };
+
     return (
-        <section id="work" class="projects">
-            <h2 class="section-title primary-border">Work</h2>
-        <div>
-        {/* first project */}
-        <article class="proejcts">
-            <a href="https://pawshop.herokuapp.com/">
-                <img src="./assets/image/PawShop.png" alt="group proejct: Pet lovers exchange" />
-            </a>
-            <div class="project-ex">
-                <h3 class="project-name">Paw Shop (Group Project3)</h3>
-                <p>Live URL: <a href="https://pawshop.herokuapp.com/">https://pawshop.herokuapp.com/</a></p>
+        <section>
+            <h2>{capitalizeFirstLetter(project1.name)}</h2>
+            <span>Live URL: </span><a href={project1.liveUrl}>{project1.liveUrl}</a>
+            <div className="flex-row">
+                <img
+                    src={screenshot1}
+                    alt="third group project"
+                    className="img-thumbnail mx-1"
+                    style={{width: "75%"}}
+                />
             </div>
-        </article>
 
-        {/* second project */}
-        <article class="proejcts">
-            <a href="https://mymedlist.herokuapp.com/">
-                <img src="./assets/image/My_Meds_Homepage.png" alt="group proejct: Medication List Saving Application My Meds" />
-            </a>
-            <div class="project-ex">
-                <h3 class="project-name">My Meds - Medication List Storage (Group Project2)</h3>
-                <p>Live URL: <a href="https://mymedlist.herokuapp.com/">https://mymedlist.herokuapp.com/</a></p>
+            <h2>{capitalizeFirstLetter(project2.name)}</h2>
+            <span>Live URL: </span><a href={project2.liveUrl}>{project2.liveUrl}</a>
+            <div className="flex-row">
+                <img
+                    src={screenshot2}
+                    alt="second group project"
+                    className="img-thumbnail mx-1"
+                    style={{width: "75%"}}
+                />
             </div>
-        </article>
 
-        {/* third project */}
-        <article class="proejcts">
-            <a href="https://jchoi10.github.io/eat-healthy/">
-                <img src="./assets/image/EATionary_Homepage.png" alt="group proejct: recipe recommandation web application EATionary" />
-            </a>
-            <div class="project-ex">
-                <h3 class="project-name">EATionary - Recipe Finder (Group Project1)</h3>
-                <p>Live URL: <a href="https://jchoi10.github.io/eat-healthy/">https://jchoi10.github.io/eat-healthy/</a></p>
+            <h2>{capitalizeFirstLetter(project3.name)}</h2>
+            <span>Live URL: </span><a href={project3.liveUrl}>{project3.liveUrl}</a>
+            <div className="flex-row">
+                <img
+                    src={screenshot3}
+                    alt="first group project"
+                    className="img-thumbnail mx-1"
+                    style={{width: "75%"}}
+                />
             </div>
-        </article>
-
-        {/* fourth proejct */}
-        <article class="projects">
-            <a href="https://jchoi10.github.io/horiseon-module-update/">
-                <img src="./assets/image/HTML_Correction.png" alt="HTML correction web app example" />
-            </a>
-            <div class="proejct-ex">
-                <h3 class="project-name">Update/Correct CSS</h3>
-                <p>Live URL: <a href="https://jchoi10.github.io/horiseon-module-update/">https://jchoi10.github.io/horiseon-module-update/</a></p>
-            </div>
-        </article>
-
-        {/* fifth project */}
-        <article class="projects">
-            <a href="https://jchoi10.github.io/jmc_portfolio/">
-                <img src="./assets/image/run_buddy_homepage.png" alt="jongwon choi's web portfolio homepage" />
-            </a>
-            <div class="project-ex">
-                <h3 class="project-name">Jongwon (Michael) Choi Portfolio</h3>
-                <p>Live URL: <a href="https://jchoi10.github.io/jmc_portfolio/">https://jchoi10.github.io/jmc_portfolio/</a></p>
-            </div>
-        </article>
-        
-        {/* sixth project */}
-        <article class="proejcts">
-            <a href="https://jchoi10.github.io/password_generatorX/">
-                <img src="./assets/image/password_generator.png" alt="password generator" />
-            </a>
-            <div class="project-ex">
-                <h3 class="project-name">Password Generator</h3>
-                <p>Live URL: <a href="https://jchoi10.github.io/password_generatorX/">https://jchoi10.github.io/password_generatorX/</a></p>
-            </div>
-        </article>
-
-    </div>    
-    </section>
+        </section>
     );
 };
 
-export default Projects;
+export default Project;

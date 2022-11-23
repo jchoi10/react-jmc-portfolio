@@ -2,14 +2,14 @@ import React from 'react';
 import './App.css';
 import Nav from './components/Nav';
 import About from './components/About';
-import Projects from './components/Project';
+import Project from './components/Project';
 
 function App() {
   return (
     <div>
       <Nav></Nav>
       <main>
-        <Projects></Projects>
+        <Project></Project>
         <About></About>
       </main>
     </div>
