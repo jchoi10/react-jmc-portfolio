@@ -2,12 +2,6 @@
 - ![MIT license badge](https://img.shields.io/badge/license-mit-blue)
 - N/A
 
-
-## Demo Video Google Drive Link
-
-- [==](==)
-- [Demo Video](**) 
-
 ## Application Screenshot
 
 ![screenshot](__)
@@ -15,7 +9,10 @@
 
 # Area of improvemnet
 
-- 
+- Division between each pages needed
+- Syling for each element needed
+- Personal projects should be added
+- Contact information should be added
 
 # Github Repo URL
 
