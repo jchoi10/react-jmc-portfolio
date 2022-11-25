@@ -26,35 +26,32 @@ const ProjectList = (props) => {
         githubRepo: "https://github.com/jchoi10/eat-healthy"
     };
 
-    // const {pageSelected} = props;
-    // const [curretProject, setCurrentProject] = useState(projects[0]);
-
-    // const [projects] = useState([
-    //     {
-    //         title: "Paw Shop (Group Project3)",
-    //         liveUrl: "https://pawshop.herokuapp.com/",
-    //         image: groupProject3,
-    //         imageName: "PawShop.png",
-    //         description: "This application gives opportunity to pet owners to exchange accessories, food and etc.",
-    //         githubRepo: "https://github.com/mnwana/paw-shop"
-    //     },
-    //     {
-    //         title: "My Meds - Medication List Storage (Group Project2)",
-    //         liveUrl: "https://mymedlist.herokuapp.com/",
-    //         image: groupProject2,
-    //         imageName: "My_Meds_Homepage.png",
-    //         description: "This application can save and manage patients list of medicine, which they are taking.",
-    //         githubRepo: "https://github.com/mnwana/mymedlist"
-    //     },
-    //     {
-    //         title: "EATionary - Recipe Finder (Group Project1)",
-    //         liveUrl: "https://jchoi10.github.io/eat-healthy/",
-    //         image: groupProject1,
-    //         imageName: "EATionary_Homepage.png",
-    //         description: "This application recommands the user know what kind of recipes they could use with the current ingredients.",
-    //         githubRepo: "https://github.com/jchoi10/eat-healthy"
-    //     }
-    // ])
+    const [projects] = useState([
+        {
+            title: "Paw Shop (Group Project3)",
+            liveUrl: "https://pawshop.herokuapp.com/",
+            image: groupProject3,
+            imageName: "PawShop.png",
+            description: "This application gives opportunity to pet owners to exchange accessories, food and etc.",
+            githubRepo: "https://github.com/mnwana/paw-shop"
+        },
+        {
+            title: "My Meds - Medication List Storage (Group Project2)",
+            liveUrl: "https://mymedlist.herokuapp.com/",
+            image: groupProject2,
+            imageName: "My_Meds_Homepage.png",
+            description: "This application can save and manage patients list of medicine, which they are taking.",
+            githubRepo: "https://github.com/mnwana/mymedlist"
+        },
+        {
+            title: "EATionary - Recipe Finder (Group Project1)",
+            liveUrl: "https://jchoi10.github.io/eat-healthy/",
+            image: groupProject1,
+            imageName: "EATionary_Homepage.png",
+            description: "This application recommands the user know what kind of recipes they could use with the current ingredients.",
+            githubRepo: "https://github.com/jchoi10/eat-healthy"
+        }
+    ])
 
     return (
         // <section>
