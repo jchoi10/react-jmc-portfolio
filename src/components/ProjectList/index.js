@@ -37,7 +37,7 @@ const ProjectList = (props) => {
         <div>
             <div className="flex-row">
                 {projects.map((project) => (
-                    <div className="col-md-3 text-left" key={project.title}>
+                    <div className="text-center" key={project.title}>
                         <div className="mx-2">
                             <h3>{project.title}</h3>
                             <p>{capitalizeFirstLetter(project.description)}</p>
@@ -52,6 +52,7 @@ const ProjectList = (props) => {
                             src={project.image}
                             alt={project.title}
                             className="img-thumbnail mx-1 mb-5"
+                            style={{width: "75%"}}
                             key={project.title}
                         />
                     </div>
