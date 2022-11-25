@@ -3,6 +3,7 @@ import './App.css';
 import Nav from './components/Nav';
 import About from './components/About';
 import Project from './components/Project';
+import ProjectList from './components/ProjectList';
 
 function App() {
   const [categories] = useState([
@@ -19,7 +20,7 @@ function App() {
         currentCategory={currentCategory}
       ></Nav>
       <main>
-        <Project></Project>
+        <ProjectList></ProjectList>
         <About></About>
       </main>
     </div>
