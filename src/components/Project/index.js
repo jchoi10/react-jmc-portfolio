@@ -7,9 +7,11 @@ function Project({currentCategory}) {
     const { name, description } = currentCategory;
     return (
         <section>
-            <h1>{capitalizeFirstLetter(name)}</h1>
-            <p>{description}</p>
-            <ProjectList category={name} />
+            <div class="mx-3">
+                <h1>{capitalizeFirstLetter(name)}</h1>
+                <p>{description}</p>
+                <ProjectList category={currentCategory.name} />
+            </div>
         </section>
     );
 };
