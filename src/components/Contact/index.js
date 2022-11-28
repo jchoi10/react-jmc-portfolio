@@ -10,13 +10,13 @@ const ContactForm = () => {
     const {name, email, message} = formState;
 
     function handleChange(e) {
-        setFormState({...formState, name: e.target.value})
+        setFormState({...formState, [e.target.name]: e.target.value})
     };
 
     console.log(formState);
 
     return (
-        <section>
+        <section id="contact">
             <h1>Contact me</h1>
             <form id="contact-form">
                 <div>
@@ -25,11 +25,11 @@ const ContactForm = () => {
                 </div>
                 <div>
                     <label htmlFor="email">Email address:</label>
-                    <input type="email" defaultValue={email} name="email" />
+                    <input type="email" defaultValue={email} onChange={handleChange} name="email" />
                 </div>
                 <div>
                     <label htmlFor="message">Message:</label>
-                    <textarea type="message" defaultValue={message} rows="5" />
+                    <textarea type="message" defaultValue={message} onChange={handleChange} rows="5" />
                 </div>
                 <button type="submit">Submit</button>
             </form>

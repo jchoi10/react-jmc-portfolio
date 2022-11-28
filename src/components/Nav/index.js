@@ -24,20 +24,20 @@ const Nav = (props) => {
             <a href="/">Jongwon (Michael) Choi's Portfolio</a>
         </h1>
         <nav>
-            <ul className="flex-row">
-                <li className="mx-2">
+            <ul className="flex-row mx-2">
+                <li>
                     <a href="#about">
                         About
                     </a>
                 </li>
-                <li className="mx-2">
+                <li>
                     <span onClick={()=>handleClick('Contact')}>
                         Contact
                     </span>
                 </li>
                 {
                     categories.map((category) => (
-                        <li className={`mx-1 ${currentCategory.name === category.name && 'navActive'}`} key={category.name}>
+                        <li className={`${currentCategory.name === category.name && 'navActive'}`} key={category.name}>
                             <span onClick={() => { setCurrentCategory(category)}}>
                                 {capitalizeFirstLetter(category.name)}
                             </span>
