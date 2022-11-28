@@ -3,20 +3,10 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 
 const Nav = (props) => {
 
-    // const categories = [
-    //     {name: 'Work', description: 'Past coding work examples; web application'},
-    // ];
-
-    // const handleClick = (item) => {
-    //     console.log(item);
-    //     return item;
-    // };
-
-    // const [categories] = useState([
-    //     {name: 'Work', description: 'Past coding work examples; web application'},
-    // ]);
-
-    // const [currentCategory, setCurrentCategory] = useState(categories[0]);
+    const handleClick = (item) => {
+        console.log(item);
+        return item;
+    };
 
     const {
         categories = [],
@@ -41,9 +31,9 @@ const Nav = (props) => {
                     </a>
                 </li>
                 <li className="mx-2">
-                    <a href="#contacts">
+                    <span onClick={()=>handleClick('Contact')}>
                         Contact
-                    </a>
+                    </span>
                 </li>
                 {
                     categories.map((category) => (
